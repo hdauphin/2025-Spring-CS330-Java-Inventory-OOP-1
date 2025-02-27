@@ -23,7 +23,7 @@ public class Consumable extends Item {
      * Default to a Consumable Item with an empty name, no effect and zero
      * uses.
      */
-    public Consumable()                                                                          //**********
+    public Consumable()                                                                          //****DONE******
     {
         super("", true);
 
@@ -36,9 +36,13 @@ public class Consumable extends Item {
      *
      * @param src consumable item to duplicate
      */
-    public Consumable(Consumable src)                                                             //**********
+    public Consumable(Consumable src)                                                             //*****DONE*****
     {
         // Complete this method
+        super("",true);
+        this.effect=src.effect; 
+        this.uses=src.uses; 
+
     }
 
     /**

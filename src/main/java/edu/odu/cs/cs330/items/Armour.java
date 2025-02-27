@@ -44,10 +44,17 @@ public class Armour extends Item {
      * Default to a armour with an empty name, zero durability, zero defense,
      * blank material, no modifier a zero modifier level, and a blank element.
      */
-    public Armour()                                                                         //**********
+    public Armour()                                                                         //*****DONE*****
     {
         // Initialize all data members (including those inherited from Item)
 
+        super("", false);
+        this.durability=0; 
+        this.defense=0; 
+        this.material="";
+        this.modifier="";
+        this.modiferLevel = 0; 
+        this.element="";
         
     }
 
@@ -56,9 +63,16 @@ public class Armour extends Item {
      *
      * @param src armour to duplicate
      */
-    public Armour(Armour src)                                                               //**********
+    public Armour(Armour src)                                                               //*****DONE*****
     {
         // Set and/or copy data members for *this* object based on *src*.
+        super("",false);
+        this.durability=src.durability; 
+        this.defense=src.defense; 
+        this.material=src.material;
+        this.modifier=src.modifier;
+        this.modiferLevel=src.modiferLevel; 
+        this.element=src.element;
     }
 
     /**
