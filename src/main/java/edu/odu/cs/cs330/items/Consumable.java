@@ -23,7 +23,7 @@ public class Consumable extends Item {
      * Default to a Consumable Item with an empty name, no effect and zero
      * uses.
      */
-    public Consumable()
+    public Consumable()                                                                          //**********
     {
         super("", true);
 
@@ -36,7 +36,7 @@ public class Consumable extends Item {
      *
      * @param src consumable item to duplicate
      */
-    public Consumable(Consumable src)
+    public Consumable(Consumable src)                                                             //**********
     {
         // Complete this method
     }
@@ -85,7 +85,7 @@ public class Consumable extends Item {
      * Read Consumable Item attributes.
      */
     @Override
-    public void read(Scanner snr)
+    public void read(Scanner snr)                                                                   //**********
     {
         super.name = snr.next();
 
@@ -96,7 +96,7 @@ public class Consumable extends Item {
      * Clone--i.e., copy--this Consumable Item.
      */
     @Override
-    public Item clone()
+    public Item clone()                                                                             //**********
     {
         return null;
     }
@@ -105,7 +105,7 @@ public class Consumable extends Item {
      * *Print* the Consumable Item
      */
     @Override
-    public String toString()
+    public String toString()                                                                        //**********
     {
         return "Implement this function";
     }

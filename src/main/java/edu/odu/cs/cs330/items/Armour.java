@@ -44,9 +44,11 @@ public class Armour extends Item {
      * Default to a armour with an empty name, zero durability, zero defense,
      * blank material, no modifier a zero modifier level, and a blank element.
      */
-    public Armour()
+    public Armour()                                                                         //**********
     {
         // Initialize all data members (including those inherited from Item)
+
+        
     }
 
     /**
@@ -54,7 +56,7 @@ public class Armour extends Item {
      *
      * @param src armour to duplicate
      */
-    public Armour(Armour src)
+    public Armour(Armour src)                                                               //**********
     {
         // Set and/or copy data members for *this* object based on *src*.
     }
@@ -187,7 +189,7 @@ public class Armour extends Item {
      * Read Armour attributes.
      */
     @Override
-    public void read(Scanner snr)
+    public void read(Scanner snr)                                                           //**********
     {
         super.name   = snr.next();
 
@@ -198,7 +200,7 @@ public class Armour extends Item {
      * Clone--i.e., copy--this Armour.
      */
     @Override
-    public Item clone()
+    public Item clone()                                                                     //**********
     {
         // Replace the next line
         return null;
@@ -208,7 +210,7 @@ public class Armour extends Item {
      * *Print* one Armour.
      */
     @Override
-    public String toString()
+    public String toString()                                                                //!!!!!!
     {
         return "Implement This Function";
     }
