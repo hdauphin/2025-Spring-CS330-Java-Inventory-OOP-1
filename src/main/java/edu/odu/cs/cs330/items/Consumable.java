@@ -39,7 +39,7 @@ public class Consumable extends Item {
     public Consumable(Consumable src)                                                             //*****DONE*****
     {
         // Complete this method
-        super("",true);
+        super(src.getName(),src.isStackable());
         this.effect=src.effect; 
         this.uses=src.uses; 
 
@@ -94,6 +94,9 @@ public class Consumable extends Item {
         super.name = snr.next();
 
         // Complete this method
+        this.effect=snr.next();
+        this.uses=snr.nextInt();
+
     }
 
     /**
@@ -102,7 +105,11 @@ public class Consumable extends Item {
     @Override
     public Item clone()                                                                             //**********
     {
-        return null;
+        Consumable copy = new Consumable();
+        copy.setName(this.getName());
+        copy.setEffect(this.getEffect());
+        copy.setNumberOfUses(this.getNumberOfUses());
+        return copy;
     }
 
     /**
@@ -111,6 +118,9 @@ public class Consumable extends Item {
     @Override
     public String toString()                                                                        //**********
     {
-        return "Implement this function";
+        return String.format("  Nme: %s\n  Eft: %s\n  Use: %d\n",
+                          this.name,
+                          this.effect,
+                          this.uses);
     }
 }

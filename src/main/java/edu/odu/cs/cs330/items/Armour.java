@@ -66,7 +66,7 @@ public class Armour extends Item {
     public Armour(Armour src)                                                               //*****DONE*****
     {
         // Set and/or copy data members for *this* object based on *src*.
-        super("",false);
+        super(src.getName(),src.isStackable());
         this.durability=src.durability; 
         this.defense=src.defense; 
         this.material=src.material;
@@ -208,6 +208,13 @@ public class Armour extends Item {
         super.name   = snr.next();
 
         // Complete this method
+
+        this.material=snr.next();
+        this.durability=snr.nextInt();
+        this.defense=snr.nextInt();
+        this.modifier=snr.next();
+        this.modiferLevel=snr.nextInt();
+        this.element=snr.next();
     }
 
     /**
@@ -217,7 +224,15 @@ public class Armour extends Item {
     public Item clone()                                                                     //**********
     {
         // Replace the next line
-        return null;
+        Armour copy = new Armour();
+        copy.setName(this.getName());
+        copy.setDurability(getDurability());
+        copy.setDefense(this.getDefense());
+        copy.setMaterial(this.getMaterial());
+        copy.setModifier(this.getModifier());
+        copy.setModifierLevel(this.getModifierLevel());
+        copy.setElement(this.getElement());
+        return copy;
     }
 
     /**
@@ -226,7 +241,14 @@ public class Armour extends Item {
     @Override
     public String toString()                                                                //!!!!!!
     {
-        return "Implement This Function";
+        return String.format("  Nme: %s\n  Dur: %d\n  Def: %d\n  Mtl: %s\n  Mdr: %s (Lvl %d)\n  Emt: %s\n",
+                          this.name,
+                          this.durability,
+                          this.defense,
+                          this.material,
+                          this.modifier,
+                          this.modiferLevel,  
+                          this.element);
     }
 }
 
